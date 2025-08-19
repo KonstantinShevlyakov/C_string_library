@@ -11,9 +11,10 @@ int main(void){
     char text[100];
 
     get_word(text);
-    str_strip(text);
+    char* stripped = str_strip(text);
 
-    printf("Result: '%s'\n", text);
+    printf("Result: '%s'\n", stripped);
+    free(stripped);
 
     return 0;
 }
